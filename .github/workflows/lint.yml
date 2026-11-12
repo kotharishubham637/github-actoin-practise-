@@ -1,13 +1,24 @@
 name: auto linter
-on: 
+
+on:
   push:
-    paths: *.py
+    paths:
+      - '*.py'
 
 jobs:
   code:
     runs-on: ubuntu-latest
     steps:
-      - name: cheeckout/clone the code
-        uses: actions/checkout@v7
-      - name: instal linter
-        uses: pip install ruff
+      - name: Checkout the code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install linter
+        run: pip install ruff
+
+      - name: Run Ruff linter
+        run: ruff check .
