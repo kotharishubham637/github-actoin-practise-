@@ -2,7 +2,7 @@
 name: hello
 # it shows when the workflow runs
 on:
-  workflow_dispatch:
+  workflow_dispatch: 
 # Jobs 
 jobs:   
   say-hello: 
