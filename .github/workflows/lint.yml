@@ -2,7 +2,7 @@ name: auto linter
 
 on:
   push:
-    paths: *.py
+    paths: "*.py"
 jobs:
   code:
     runs-on: ubuntu-latest
@@ -12,3 +12,6 @@ jobs:
 
       - name: Install linter
         run: pip install ruff
+      
+      - name: check the files for ruff
+        run: ruff check .
