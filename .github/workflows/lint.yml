@@ -9,3 +9,5 @@ jobs:
     steps:
       - name: cheeckout/clone the code
         uses: actions/checkout@v7
+      - name: instal linter
+        uses: pip install ruff
