@@ -1,3 +1,4 @@
+# this is a sample code use to understand the lint  
 from flask import Flask, render_template
 app = Flask(__name__)
 
